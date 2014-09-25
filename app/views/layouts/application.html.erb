@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Xplugin</title>
+     <%= stylesheet_link_tag 'application', media: 'all'%>
+
+   <link rel="stylesheet" href="/assets/stylesheets/bootstrap.css">
+
+   <link rel="stylesheet" href="/assets/stylesheets/bootstrap-theme.css">
+  <script src="assets/javascripts/json2.js"></script>
+<script src="assets/javascripts/jquery.js"></script>
+  <script src="/assets/javascripts/jstorage.js"></script>
+   <script src="/assets/javascripts/string.js"></script>
+   <script src="/assets/javascripts/chanel.js"></script>
+   <script src="/assets/javascripts/storage.js"></script>
+  <script src="/assets/javascripts/events.js"></script>
+    <script src="/assets/javascripts/functions.js"></script>
+    <script src="/assets/javascripts/application.js"></script>
+     <script src="/assets/javascripts/main.js"></script>
+  <script src="assets/javascripts/bootstrap.js"></script>
+   <%= csrf_meta_tags %>
+<style>
+a:hover, a:focus, a:visited ß  {
+    text-decoration:none;
+    color:white;
+}
+</style>
+</head>
+<body>
+<script type="application/template" id="plugin-title">
+ <div class='account-info'>
+       <p>
+         <span class='name'></span>
+         <button id='signout-button'>Sign out</button>
+       </p>
+     </div>
+</script>
+<script type="application/template" id="plugin-content">
+ <div class='popup'>
+       <div id='user-not-signed-in'>
+         <h3>Ad2MyAccount</h3>
+         <p class='error'></p>
+         <p>Enter your username and password below:</p>
+         <form id='sign-in' method='POST'>
+           <input name='email' placeholder='Email' type='email'>
+           <br>
+           <input name='password' placeholder='Password' type='password'>
+           <br>
+           <input type='submit' value='Sign in'>
+         </form>
+         <p>
+           Don't have an account?
+           <a href='https://www.ad2myaccount.com/users/sign_up' target='_blank'>Sign up</a>
+         </p>
+       </div>
+       <div id='user-signed-in'>
+         <h3>Welcome to Ad2MyAccount</h3>
+         <div class='mood'>
+           I'm feeling
+         </div>
+         <p>
+           Ad Status:
+           <span class='ad-status'>OFF</span>
+         </p>
+         <div class='button-container'>
+           <div class='toggle-ads'></div>
+         </div>
+         <p>
+           Go to
+         </p>
+         <ul>
+           <li>
+             <a href='https://www.ad2myaccount.com/dashboard' target='_blank'>Dashboard</a>
+           </li>
+         </ul>
+       </div>
+     </div>
+     </div>
+   </script>
+
+<%= yield %>
+ <script>
+   $(document).ready(function(){
+       title = $('#plugin-title').html()
+       content = $('#plugin-content').html()
+       $("a#example").popover({
+        placement: 'bottom',
+        html: true,
+        title: function(){return title},
+        content: function() {return content}
+       });
+       $("a#example").click(function(){
+        a2maInit()
+       })
+   });
+   </script>
+</body>
+</html>

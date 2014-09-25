@@ -1,0 +1,43 @@
+
+.plugin .content {
+  background-color: .fff;
+  padding: 10px; }
+
+
+.plugin input[type="email"], input[type="password"] {
+  border-radius: 5px;
+  border: 1px solid .cccccc;
+  padding: 5px; }
+
+.plugin input[type="submit"] {
+  padding: 20px; }
+
+.plugin .user-signed-in {
+  display: none; }
+
+.plugin .account-info {
+  text-align: right; }
+
+.plugin .error {
+  color: .900; }
+
+.plugin .ad-status {
+  font-weight: bold; }
+
+.plugin span.active {
+  color: .060; }
+
+.plugin span.inactive {
+  color: .600; }
+
+.plugin .toggle-ads {
+  margin: 0 auto;
+  cursor: pointer;
+  background-size: 420px 120px;
+  background-image: url("images/control-buttons.png");
+  height: 120px;
+  width: 120px; }
+  .plugin .toggle-ads.started {
+    background-position: 0px; }
+  .plugin .toggle-ads.stopped {
+    background-position: -150px; }
