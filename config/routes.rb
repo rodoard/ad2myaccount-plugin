@@ -1,57 +1,16 @@
 Rails.application.routes.draw do
-
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-   root 'home#welcome'
-
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
-
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
-
-  # Example resource route with concerns:
-  #   concern :toggleable do
-  #     post 'toggle'
-  #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
-
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+  post '/feedback' => 'home#feedback'
+  post 'survey/response' => 'home#survey_response'
+  get '/about-us' => 'home#about'
+  get '/features' => 'home#features'
+  get '/ad-tube' => 'home#ad_tube'
+  get 'signin' => 'home#signin'
+  get 'signout' => 'home#signout'
+  get '/ads/sample' => 'home#ads_sample'
+  get '/ads/survey' => 'home#ads_survey'
+  get 'search/yahoo' => 'home#search_yahoo'
+  get 'search/a2ma' => 'home#search_a2ma'
+  get 'search/results/a2ma' => 'home#search_results_a2ma'
+  get 'search/google' => 'home#search_google'
+  root 'home#welcome'
 end

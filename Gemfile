@@ -2,19 +2,23 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
+gem 'mechanize'
+gem 'nokogiri'
+gem 'excon'
+
+gem 'recursive-open-struct'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :development
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
-
+ gem 'google-search'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
-
 group :production do
     gem 'rails_12factor'
     gem 'pg'
@@ -25,4 +29,6 @@ end
 
 # Use unicorn as the app server
 # gem 'unicorn'
+gem 'haml-rails'
+gem 'thin'
 

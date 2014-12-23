@@ -10,7 +10,15 @@
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
-
+*.DS_Store
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+*.webm
+
+public/jar-c29dfff31f0fecc3d4ec9b86c29f8d45.png
+
+public/b90096be41d2e64d93d64818facae6c5.webm
+
+public/assets/images/Ad Tube Design.png

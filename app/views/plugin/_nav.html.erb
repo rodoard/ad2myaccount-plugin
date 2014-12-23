@@ -1,0 +1,28 @@
+<div class="tabbable">
+  <ul class="nav nav-pills col-md-offset-2" style="padding-bottom:10px;">
+    <li>
+      <i class="fa fa-search"></i>
+       <a style="padding:0px;display:inline-block" data-toggle="tab" href="#search_results">Search Results</a></li>
+    <li><a style="padding:0px; padding-left:8px;" data-toggle="tab" href="#categories">Categories</a></li>
+    <li><a  style="padding:0px; padding-left:8px;" data-toggle="tab" href="#feedback">Ad Feedback</a></li>
+    <li><a  style="padding:0px; padding-left:8px;" data-toggle="tab" href="#rewards"><i class="fa fa-link"></i>Your Rewards</a></li>
+    <li><a style="padding:0px; padding-left:8px;" data-toggle="tab" href="#favourites"><i class="fa fa-link"></i> Favourites</a></li>
+  </ul>
+  <div  class="tab-content">
+    <div id="search_results" class="tab-pane col-md-12">
+      <%= render "plugin/search_results" %>
+    </div>
+    <div id="categories" class="tab-pane col-md-offset-2 col-md-7">
+      <%= render "plugin/categories" %>
+    </div>
+    <div id="feedback" class="tab-pane col-md-offset-2 col-md-7">
+      <%= render "plugin/feedback" %>
+    </div>
+    <div id="rewards" class="tab-pane col-md-offset-2 col-md-7">
+      <%= render "plugin/rewards" %>
+    </div>
+    <div id="favourites" class="tab-pane col-md-offset-2 col-md-7">
+      <%= render "plugin/favourites" %>
+    </div>
+  </div>
+</div>

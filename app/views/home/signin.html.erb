@@ -1,0 +1,43 @@
+<div class='container'>
+  <div class='row' style='margin-top:20px'>
+    <div class='col-sm-6 col-sm-offset-3'>
+      <div class='sign-form'>
+        <h3 class='first-child'>Sign In</h3>
+        <hr>
+        <div><p class='error has-error'></p></div>
+        <div class='form'>
+          <form id='sign-in' method='POST'>
+            <div style="margin:0;padding:0;display:inline">
+              <input name="utf8" type="hidden" value="&#x2713;" />
+              <input name="authenticity_token" type="hidden" value="/c+Cju/YpuLgqGoKEDPDUQj+Plep0ZxqRMh+X/3WhQ0=" />
+            </div>
+            <div class='form-group'>
+              <div class='input-group'>
+<span class='input-group-addon'>
+<i class='fa fa-user'></i>
+</span>
+                <div class="input string email required"><input autofocus="autofocus" class="string email required form-control" id="user_email" maxlength="255" name="user[email]" placeholder="Email" required="required" size="50" type="email" value="" /></div>
+              </div>
+            </div>
+            <div class='form-group'>
+              <div class='input-group'>
+<span class='input-group-addon'>
+<i class='fa fa-lock'></i>
+</span>
+                <div class="input string password optional"><input class="string password optional form-control" id="user_password" name="user[password]" placeholder="Password" size="50" type="password" /></div>
+              </div>
+            </div>
+
+            <input class="btn btn-color" name="commit" type="submit" value="Sign in" />
+          </form>
+
+        </div>
+        <br>
+        <p class='already'>
+          Don't have an account?
+          <a href='#'>Sign up</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

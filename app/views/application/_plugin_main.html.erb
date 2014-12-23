@@ -1,0 +1,42 @@
+<script type="application/template" id="plugin-content">
+  <div class='popup'>
+    <div id='user-not-signed-in'>
+      <h3>Ad2MyAccount</h3>
+      <p class='error'></p>
+      <p>Enter your username and password below:</p>
+      <form id='sign-in' method='POST'>
+        <input name='email' placeholder='Email' type='email'>
+        <br>
+        <input name='password' placeholder='Password' type='password'>
+        <br>
+        <input type='submit' value='Sign in'>
+      </form>
+      <p>
+        Don't have an account?
+        <a href=' http://localhost:3000/users/sign_up' target='_blank'>Sign up</a>
+      </p>
+    </div>
+    <div id='user-signed-in'>
+      <h3>Welcome to Ad2MyAccount</h3>
+      <div class='mood'>
+        I'm feeling
+      </div>
+      <p>
+        Ad Status:
+        <span class='ad-status'>OFF</span>
+      </p>
+      <div class='button-container'>
+        <div class='toggle-ads'></div>
+      </div>
+      <p>
+        Go to
+      </p>
+      <ul>
+        <li>
+          <a href=' http://localhost:3000/dashboard' target='_blank'>Dashboard</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+</script>

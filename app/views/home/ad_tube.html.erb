@@ -1,0 +1,14 @@
+<%= render "secondary_nav" %>
+<div id='user-not-signed-in'>
+  <span class="message"><center><h2>You must be signed in to view Ad Tube page.</h2> </center></span>
+
+</div>
+<div id='user-signed-in'>
+  <div class="container">
+    <div class="col-md-12" id="ad-tube" style="clear:both">
+      <%= render "plugin/left" %>
+      <%= render "plugin/main" %>
+      <%= render "plugin/right" %>
+    </div>
+  </div>
+</div>

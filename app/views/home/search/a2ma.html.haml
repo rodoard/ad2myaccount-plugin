@@ -1,0 +1,45 @@
+!!!
+%html
+  %head
+    %title A2MA Search Results
+    = javascript_include_tag "jquery"
+    = javascript_include_tag "util"
+    = stylesheet_link_tag "a2ma_search"
+    = stylesheet_link_tag "bootstrap"
+    :css
+      .poster {
+        margin-bottom:5px;
+      }
+      .play{
+           position: absolute;
+          	z-index: 9999;
+          	opacity:0.8;
+          	margin-left:50px;
+          	margin-top:19px;
+          	cursor: pointer; cursor: hand;
+        }
+
+    :javascript
+       var msg = {
+                  showFindItResults: true,
+                  results_id: "#{ search_results_id }"
+              }
+      sendParentMessage(msg)
+  %body
+    .container
+      %hgroup.mb20
+        %h1 A2MA Search Results
+        - count = ads.size
+        %h2.lead
+          %strong.text-danger
+            = count
+          = "results".pluralize(count)
+          were found for the search for
+          %strong.text-danger= keyword
+      %ul#results{style:"margin-top:15px"}
+        - ads.each do |ad|
+          %li{style:"position:relative"}
+            %img{class:"play", src:asset_path('video-play.png')}
+            .poster{style:"display:inline-block;"}
+              %img{src:"#{ad.poster}", width:"160", height:"100"}
+            = ad.name

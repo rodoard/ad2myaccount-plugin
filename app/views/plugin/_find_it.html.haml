@@ -1,0 +1,42 @@
+- content_for :js do
+  = javascript_include_tag "jquery.tmpl"
+:css
+  .play{
+     position: absolute;
+    	z-index: 9999;
+    	opacity:0.8;
+    	margin-left:50px;
+    	margin-top:-80px;
+    	cursor: pointer; cursor: hand;
+  }
+
+  .video {
+      display:inline-block;
+      position:relative;
+      margin-right:5px
+  }
+  .video a {
+    z-index:1;
+  }
+%form#find-it.validate{:role => "search", :style => "padding-top:10px"}
+  .input-group
+    %input.form-control.find-it{:maxlength => "255", :name => "find-it", :placeholder => "Then go find what you are looking for", :required => "", :size => "25", :type => "text"}
+      .input-group-btn
+        %button.btn.btn-default{:type => "submit"}
+          %span Find It!
+  .error{style:"text-color:red"}
+%script{type:"text/template", id:"find-it-results-template"}
+  .video
+    #label{style:"width:160px"}
+      %center
+        ${name}
+    %a{href:"${poster}", type:"video/mp4", data: {poster: "${poster}", dialog:"", sources: '[{"href":"${mp4}", "type": "video/mp4"}, {"href":"${webm}", "type": "video/webm"}]' }, :title => "${name}"}
+      %img{:alt => "${name}", width:"160", height:"100", :src => "${poster}"}
+    %img{class:"play", src:asset_path('video-play.png')}
+
+#find-it-results{style:"margin-top:15px;margin-bottom:15px"}
+  .gallery{style:"width:500px"}
+    #links
+%center
+  #findit-spinner.spinner
+    = render partial:"shared/ajax_loader", locals:{style:"margin-top:25px;"}

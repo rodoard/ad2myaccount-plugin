@@ -1,0 +1,4 @@
+development:
+  url: http://localhost:3000
+production:
+  url: https://www.ad2myaccount.com

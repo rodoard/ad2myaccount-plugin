@@ -1,0 +1,26 @@
+<ul >
+  <li class="first">233 Views</li>
+  <li>Company Rating 4.0/5.0</li>
+  <li>Product/Service Rating 3.4/5.0</li>
+  <li>Ad Rating 2.0/5.0</li>
+  <li>11 Likes</li>
+  <li>6 Shares</li>
+  <li>11 Favourites</li>
+</ul>
+<div class="row" style="margin-top:10px">
+ <%= form_tag '/feedback', id:"feedback-form",  class:"form-inline", role:"form", remote:true do %>
+      <div class="input-group col-md-12" style="width:100%;" >
+
+      <div class="col-md-10">
+      <%= text_area_tag 'feedback', nil, style:"width:100%; border:none; resize:none",placeholder: 'What is your feedback to this advertiser?',  class: "form-control", autocomplete: 'off', rows: 3%>
+      </div>
+          <div class="col-md-2">
+          <%= submit_tag 'Submit', style:"margin-top:30px;" %>
+          </div>
+  </div>
+<% end %>
+</div>
+
+<div class="row">
+  <div id="feedbacks" style="margin-top: 15px;"></div>
+</div>

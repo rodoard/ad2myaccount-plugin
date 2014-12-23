@@ -1,0 +1,2 @@
+modulejs.define "jStorage", ->
+  $.jStorage

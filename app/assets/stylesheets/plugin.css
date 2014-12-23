@@ -1,43 +1,62 @@
+#feedback ul li {
+   border-left: solid 2px black;
+   padding-left: 9px;
+}
+#feedback ul li.first{
+    padding-left:0px;
+    border-left:none;
+}
 
-.plugin .content {
-  background-color: .fff;
-  padding: 10px; }
+#feedback ul,
+.sharing ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+.sharing ul li, #feedback ul li { display: inline; }
 
+.sharing ul li a, #feedback ul li a
+{
+    text-decoration: none;
+    padding: .2em 1em;
+    color: #fff;
+    background-color: #036;
+}
 
-.plugin input[type="email"], input[type="password"] {
-  border-radius: 5px;
-  border: 1px solid .cccccc;
-  padding: 5px; }
+.sharing ul li a:hover, #feedback ul li a:hover
+{
+    color: #fff;
+    background-color: #369;
+}
 
-.plugin input[type="submit"] {
-  padding: 20px; }
-
-.plugin .user-signed-in {
-  display: none; }
-
-.plugin .account-info {
-  text-align: right; }
-
-.plugin .error {
-  color: .900; }
-
-.plugin .ad-status {
+#ad-tube .main .tabbable .tab-content .tab-pane {
+    padding-top:15px;
+    padding-left:15px;
+    padding-bottom:15px;
+    padding-right:15px;
+    -moz-box-shadow: 0 0 5px #888;
+    -webkit-box-shadow: 0 0 5px#888;
+    box-shadow: 0 0 5px #888;
+}
+#ad-tube .ad-status {
   font-weight: bold; }
 
-.plugin span.active {
+#ad-tube span.active {
   color: .060; }
 
-.plugin span.inactive {
+#ad-tube span.inactive {
   color: .600; }
 
-.plugin .toggle-ads {
+#ad-tube .toggle-ads {
   margin: 0 auto;
   cursor: pointer;
   background-size: 420px 120px;
   background-image: url("images/control-buttons.png");
   height: 120px;
   width: 120px; }
-  .plugin .toggle-ads.started {
+  #ad-tube .toggle-ads.started {
     background-position: 0px; }
-  .plugin .toggle-ads.stopped {
+  #ad-tube .toggle-ads.stopped {
     background-position: -150px; }
+

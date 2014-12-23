@@ -1,0 +1,107 @@
+html,body {
+    height: 100%;
+    background: none transparent;
+}
+
+.a2maonline {
+    background-color: rgba(0,0,0,0.8);
+    color: #fff;
+}
+
+.a2maonline.survey .commercial {
+    display: none;
+}
+
+.a2maonline.commercial .survey {
+    display: none;
+}
+
+.a2maonline ol.survey li {
+    margin-bottom: 15px;
+}
+
+.a2maonline.mini {
+    height: 100%;
+}
+.a2maonline.full {
+    height: 100%;
+    padding-bottom: 50px;
+}
+
+.a2maonline.full .mini {
+    display: none;
+}
+
+ .a2ma-container {
+    background-color: rgba(0,0,0,0.8);
+    padding: 10px 20px 20px 20px;
+    border-radius: 5px;
+}
+
+.a2maonline.full .full-clear {
+    clear: left;
+}
+
+.a2maonline.mini {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.a2maonline.mini .full {
+    display: none;
+}
+
+.a2maonline.mini h3 {
+    font-size: 1.3em;
+}
+
+.a2maonline.mini .content-container {
+    cursor: pointer;
+}
+
+.a2maonline .actions {
+    text-align: right;
+}
+
+.a2maonline .actions a {
+    color: #ccc;
+}
+
+.a2maonline a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.a2maonline .title h3 {
+    margin-top: 10px;
+}
+
+.a2maonline .title .image {
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+.a2maonline .title .image img {
+    height: 40px;
+}
+
+.a2maonline .dl-horizontal dt {
+    text-align: left;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.hide {
+    display: none;
+}
+
+.survey-inactivity {
+    display: none;
+}
+
+.survey-form .submit {
+    padding-left: 55px;
+    padding-top: 10px;
+}

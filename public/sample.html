@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script src="/assets/javascripts/jquery.js"></script>
+    <script src="/assets/javascripts/util.js"></script>
+<!-- Chang URLs to wherever Video.js files will be hosted -->
+<link href="/assets/stylesheets/video-js.css" rel="stylesheet" type="text/css">
+<!-- video.js must be in the <head> for older IEs to work. -->
+ <style>
+     .vjs-progress-control {
+         display:none
+     }
+ </style>
+<script src="/assets/javascripts/video.js"></script>
+<script>
+videojs.options.flash.swf = "video-js.swf";
+</script>
+</head>
+<body>
+<div class="a2maonline commercial" data-duration="" data-offering-id="">
+    <div class='content-container' data-url=''>
+        <div id="video"></div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        params = queryParams()
+        console.log(params)
+        a2maonline = document.getElementsByClassName("a2maonline")[0]
+        a2maonline.setAttribute("data-duration", params["duration"])
+        a2maonline.setAttribute("data-offering-id", params["offerId"])
+        contentContainer = document.getElementsByClassName("content-container")[0]
+        contentContainer.setAttribute("data-url", params["contentUrl"])
+        mp4 = params['mp4']
+        webm = params['webm']
+        $('#video').html(
+           '<video id="ad" controls preload="auto"  class="video-js vjs-default-skin" width="540" height="300" style="left:-8px">' +
+           '<source id="mp4"' + ' src="' + mp4 +'" ' + 'type="video/mp4"/>' +
+           '<source id="webm"' + ' src="' + webm +'" ' + 'type="video/webm"/>'+
+           '<p class="vjs-no-js">To view this video please enable ' +
+           'JavaScript, and consider upgrading to a web browser that <a'+
+           'href="http://videojs.com/html5-video-support/" target="_blank">'+
+           'supports HTML5 video</a></p>'
+               +
+           '</video>'
+        )
+        var videoEnded = function() {
+            parent.postMessage({ad_finished:true, offer_id:params["offerId"]}, "*")
+        }
+        videojs('ad', {}, function(){
+            player = this
+            player.on('ended', videoEnded)
+            player.play()
+        });
+    })
+</script>
+</body></html>
